@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 
 const dialogflowConfig = {
-    projectId: process.env.PROJECT_ID,
+    projectId: "first-bot-305315",
     privateKey: process.env.PRIVATE_KEY,
-    clientEmail: process.env.CLIENT_EMAIL
+    clientEmail: "testbot@first-bot-305315.iam.gserviceaccount.com"
 };
 
 module.exports = dialogflowConfig;
