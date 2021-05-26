@@ -4,7 +4,7 @@ const app = express();
 
 const SCOPES = 'https://www.googleapis.com/auth/calendar.events'
 const GOOGLE_PRIVATE_KEY = process.env.GOOGLE_PRIVATE_KEY
-const GOOGLE_CLIENT_EMAIL = "testbot@first-bot-305315.iam.gserviceaccount.com"
+const GOOGLE_CLIENT_EMAIL = JSON.parse(process.env.GOOGLE_CLIENT_EMAIL)
 const GOOGLE_PROJECT_NUMBER = process.env.GOOGLE_PROJECT_NUMBER
 
 
