@@ -20,6 +20,7 @@ app.listen(process.env.PORT || 5000, (err) => {
 
 const handleMessages = require("./modules/Message");
 const handlePostback = require("./modules/postBacks");
+const talkToChatbot = require("./modules/chatbot");
 
 
 
@@ -107,6 +108,23 @@ app.post('/formdata', (request, response) => {
 
 
 
+});
+
+
+app.post("/chatbot",  function (req, res) {
+    const message = req.body.message;
+    console.log("message" + message);
+
+    talkToChatbot(message)
+        .then((response) => {
+            res.send({ message: response });
+        })
+        .catch((error) => {
+            console.log("Something went wrong: " + error);
+            res.send({
+                error: "Error occured here"
+            });
+        });
 });
 
 
