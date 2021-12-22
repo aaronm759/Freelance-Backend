@@ -14,7 +14,8 @@ const configuration = {
 
 */
 
-const keys = process.env.GOOGLE_CREDENTIALS;
+const keysenvvar = process.env.GOOGLE_CREDENTIALS;
+const keys = JSON.parse(keysenvvar)
 const configuration = {
     credentials: {
         private_key: keys.private_key,
