@@ -5,8 +5,8 @@ const dialogflow = require("@google-cloud/dialogflow");
 const projectId = process.env.PROJECT_ID;
 const configuration = {
     credentials: {
-        private_key: process.env.PRIVATE_KEY,
-        client_email: process.env.CLIENT_EMAIL
+        "private_key": process.env.PRIVATE_KEY,
+        "client_email": process.env.CLIENT_EMAIL
     }
 };
 
